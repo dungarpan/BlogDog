@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {%load staticfiles%}
+    <link rel="stylesheet" type="text/css" href="{%static 'posts/css/bootstrap.min.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'posts/css/head.css'%}"/>
+	<title>{%block title%}Posts{%endblock%}</title>
+	
+    
+</head>
+<body>
+<div class="jumbotron head">
+	<div style="text-align:center">
+		<h2>THE GNU LINUX USERS GROUP</h2>
+		<h3>Our projects</h3>
+		<button type="button" class="btn btn-default">
+			<a href="{%url 'posts:index'%}">BlogDog</a>
+		</button> 
+		<button type="button" class="btn btn-default">
+   		    <a href="{%url 'posts:post-add'%}">Add a new post</a>
+ 		</button>
+	</div>
+</div>
+{%block body%}
+{%endblock%}
+</body>
+</html>
+<button type="button" class="btn btn-default">
+	<a class="navbar-brand" href="{%url 'posts:index'%}">BlogDog</a>
+</button> 
+<button type="button" class="btn btn-default">
+    <a href="{%url 'posts:post-add'%}">Add a new post</a>
+ </button>

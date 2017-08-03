@@ -1,0 +1,7 @@
+{%extends 'posts/base.html'%}
+{%block title%}Post Detail{%endblock%}
+{%block body%}
+<h3>{{post.title}} <small> {{post.timestamp}}</small></h3>
+<br>
+{{post.content}}
+{%endblock%}

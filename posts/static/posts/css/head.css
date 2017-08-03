@@ -1,0 +1,24 @@
+.jumbotron{
+	margin-bottom:1px;
+}
+
+.jumbotron.head{
+	border-radius:0px;
+	background-color:#ff8787;
+	margin-left:1px;
+	margin-right:1px;
+	height:300px;
+}
+
+.jumbotron.elements:nth-child(3n){
+	background-color:#9effcb;
+}
+
+
+.jumbotron.elements:nth-child(3n-1){
+	background-color:#9ec9ff;
+}
+
+.jumbotron.elements:nth-child(3n-2){
+	background-color:#ffe99e;
+}

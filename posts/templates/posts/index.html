@@ -1,9 +1,19 @@
-{%if all_posts%}
-<ul>
-    {%for post in all_posts%}
-	<li><a href="/post/{{post.id}}/">{{post.title}}</a></li>
+{%extends 'posts/base.html'%}
+{%block body%}
+{%if object_list%}
+	<div class="row">
+    {%for post in object_list%}
+    <div class="col-sm-12 col-md-6 jumbotron elements">
+    <div class="container">
+	<h3><a href="{%url 'posts:detail' post.id%}">{{post.title}}</a></h3>
+    <h4>{{post.content}}</h4><br>
+    {{post.updated}}<br><br>
+    </div>
+    </div>
     {%endfor%}
-</ul>
+    </div>
+
 {%else%}
     <h2>Hey add some albums</h2>
 {%endif%}
+{%endblock%}

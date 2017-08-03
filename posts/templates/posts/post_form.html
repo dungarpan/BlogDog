@@ -1,0 +1,9 @@
+{%extends 'posts/base.html'%}
+{%block title%}Add a new post{%endblock%}
+{%block body%}
+<form method="post" action="">
+	{%csrf_token%}
+	{%include 'posts/form-template.html'%}
+	<button type="submit">Submit</button>
+</form>
+{%endblock%}

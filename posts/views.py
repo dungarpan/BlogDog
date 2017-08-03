@@ -1,14 +1,20 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
+from django.views import generic
 from .models import Post
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
 
-# Create your views here.
+class IndexView(generic.ListView):
+    template_name='posts/index.html'
 
-def index(request):
-	all_posts=Post.objects.all()
-	context={'all_posts':all_posts,}
-	return render(request,'posts/index.html',context)
+    def get_queryset(self):
+    	return Post.objects.all()
 
-def detail(request, post_id):
-	return HttpResponse("<h2>THIS IS THE DETAIL FOR "+str(post_id)+"</h2>")
+class DetailView(generic.DetailView):
+	model=Post
+	template_name='posts/detail.html'
+
+class PostCreate(CreateView):
+	model=Post
+	fields=['title','content']
+    
+ 
+
