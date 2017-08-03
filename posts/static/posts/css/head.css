@@ -1,13 +1,17 @@
+.navbar-default {
+    position: relative;
+    margin-bottom: 0;
+}
+
 .jumbotron{
 	margin-bottom:1px;
 }
 
 .jumbotron.head{
 	border-radius:0px;
-	background-color:#ff8787;
+	background-image: url({%static "../images/mainimg.png"%});
 	margin-left:1px;
 	margin-right:1px;
-	height:300px;
 }
 
 .jumbotron.elements:nth-child(3n){
@@ -21,4 +25,22 @@
 
 .jumbotron.elements:nth-child(3n-2){
 	background-color:#ffe99e;
+}
+
+.mainimg { 
+   position: relative; 
+   background-color: black;
+   width: 99%; /* for IE 6 */
+}
+
+.myimg{
+	opacity:0.4;
+}
+
+.txtinimg { 
+   color: white;
+   position: absolute; 
+   top:30%;
+   left:17%;
+   text-align: center;
 }
