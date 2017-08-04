@@ -15,8 +15,14 @@
     </div> -->
     <div class="mainimg">
     {%load staticfiles%}
-    <img class="myimg" src="{%static 'posts/images/mainimg.png'%}" style="width:100%"/>
-    <h1 class="txtinimg display-1">THE GNU LINUX USERS GROUP</h1>
+    <img class="myimg" src="{%static 'posts/images/mainimg.png'%}"/>
+    <div class="container">
+        <ul>
+            <li><a class="linkhead1" style="color:white" href="{%url 'posts:index'%}">BlogDog</a></li>
+            <li><a class="linkhead2" style="color:white" href="{%url 'posts:post-add'%}">Add a new post</a></li>            
+        </ul>
+    </div>
+    <h1 class="txtinimg">THE GNU LINUX USERS GROUP</h1>
     </div>
 	<div class="row">
     {%for post in object_list%}
